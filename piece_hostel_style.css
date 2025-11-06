@@ -1,0 +1,1142 @@
+/*Sanjo EN*/
+
+/*** トップページ ***/
+.main--top {
+	color: #fff;
+	border: none;
+}
+.container--bgdt {
+	background: url(../../images/bg-dots.png) rgba(0,0,0,0.45);
+}
+.main__container--top {
+	/*padding-top: 0;
+	padding-left: 0;*/
+	padding: 0;
+	display: table;
+}
+.main__cont--top {
+		display: table-cell;
+		vertical-align: middle;
+}
+.section--top {
+  padding: 0 20px;
+}
+.top__newsList {
+	width: 100%;
+}
+.top__newsList__item {
+	display: table;
+	width: 97%;
+	border-bottom: 1px dashed  #bbb;
+	margin: 0 auto 10px;
+	padding-bottom: 10px;
+}
+.top__newsList__date,
+.top__newsList__title {
+	display: table-cell;
+}
+.top__newsList__date {
+	width: 17%;
+}
+.top__newsList__title {
+	width: 83%;
+}
+.top__reservationBtn {
+    border: 3px solid #fff;
+    width: 350px;
+    margin: 0 auto 75px;
+}
+.top__reservationBtn__link {
+	font-size: 140%; font-weight: bold; letter-spacing: 0.05em; text-align: center; padding: 8px 15px;
+	display: block;
+}
+.top__reservationBtn__link {
+	text-decoration: none;
+}
+.top__reservationBtn__link:hover {
+	color: #333;
+	background: #fff;
+	cursor: pointer;
+}
+.top__reservationBtn__jp {
+	
+}
+@media only screen and (min-width: 650px) {
+	.main--top {
+		height: 100%;
+	}
+	.container--bgstrch {
+		margin-left: 190px;
+	}
+	.main__cont--top {
+		display: table-cell;
+		vertical-align: middle;
+		padding-top: 0;
+	}
+}
+
+/* home - news */
+
+.main__hTxt--home {
+    font-family: adobe-garamond-pro, arial, sans-serif;
+    font-size: 115%;
+    line-height: 2;
+}
+.main__h--home {
+    font-size: 245%;
+    letter-spacing: 0.05em;
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+.hr--home {
+    border-color: #fff;
+}
+.home__news {
+    padding: 0 20px 25px;
+}
+.home__newsList {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.home__newsList__item {
+    border-bottom: 1px dotted #fff;
+}
+.home__newsList__item:last-child {
+    border-bottom: none;
+}
+.home__newsList__item > a {
+    font-size: 85%;
+    display: block;
+    text-decoration: none;
+    padding: 10px 7px;
+}
+.home__newsList__item > a:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,0.2);
+}
+.home__news__archiveBtn {
+    text-align: right;
+    padding: 7px 0;
+}
+.home__news__archiveBtn > a {
+    font-size: 85%;
+    text-decoration: none;
+    padding-right: 5px;
+}
+.home__news__archiveBtn > a:hover {
+    color: #fff;
+    text-decoration: underline;
+    background: none;
+}
+@media screen and (min-width:1025px) {
+    .home__news {
+        padding: 0 20px 33px;
+    }
+    .home__newsList__item > a {
+        font-size: 100%;
+    }
+    .home__news__archiveBtn > a {
+        font-size: 100%;
+    }
+}
+
+
+/***  Reservation  ***/
+.reservation__bookUnit {
+	margin-bottom: 35px;
+}
+.bookUnit__h {
+	font-size: 125%;
+	font-weight: bold;
+	line-height: 1.3;
+    letter-spacing: 0.05em;
+	border-bottom: 1px dotted #aaa;
+	padding-bottom: 4px;
+}
+.reservation__section {
+	margin-bottom: 50px;
+}
+.supply-vertical {
+	color: #777;
+  border-left: 1px #aaa solid;
+  margin: 0 0 15px 0.4em;
+  padding-left: 1em;
+}
+.page-r.bmodule {
+    color: #333;
+    font-weight: bold;
+}
+.page-r .bmodule__unit {
+    margin-bottom: 12px;
+}
+.bmodule__unit--reservation select {
+     font-size: 125%; 
+}
+.bmodule__unit--reservation {
+    margin-bottom: 12px;
+}
+.page-r .bmodule__unit--date {
+    margin-bottom: 20px;
+}
+.bmodule__unit dd {
+    font-size: 108%;
+}
+.page-r .bmodule__searchBtn {
+    color: #333;
+    border: 2px solid #333;	
+      padding: 4px 30px;
+}
+.page-r .bmodule__searchBtn:hover {
+    color: #fff;
+    background: #333;
+}
+.page-r .bmodule__supply {
+    font-size: 80%;
+}
+
+@media only screen and (min-width: 650px) {
+    .bookUnit__h {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .bmodule__unit--reservation {
+        text-align: left;
+        float: left;
+        margin-bottom: 8px;
+        margin-right: 28px;
+    }
+    .page-r .bmodule__unit--date {
+        margin-bottom: 8px;
+    }
+    .bmodule__search--reservation {
+        float: left;
+    }
+}
+
+
+/*** アクセス ***/
+.access__gmap {
+	border-bottom: 2px solid #333;
+}
+.access__map {
+	width: 100%;
+	height: 330px;
+	border-bottom: 2px solid #333;
+}
+.map__infos__h {
+	font-size: 100% !important;
+	line-height: 1.5;
+	margin-bottom: 3px;
+}
+.map__infos__body {
+	font-size: 86%;
+	line-height: 1.5;
+	padding: 2px 0;
+}
+.localNav__list--table {
+}
+.localNav__item {
+}
+.hr-a {
+	border-top: 1px solid #ddd;
+	margin: 3em 0;
+}
+.section--access > p {
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.access__diaUnit {
+	margin-bottom: 25px;
+}
+.access__diaUnit__h {
+	font-size: 132%;
+}
+.access__diaUnit__en {
+	color: #B38E00;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 76%;
+	font-style: italic;
+}
+.access__diaImg {
+	margin-bottom: 10px;
+}
+.supply--access {
+	color: #777;
+	font-size: 80%;
+	line-height: 1.65;
+}
+@media only screen and (min-width: 650px) {
+.access__map {
+	height: 385px;
+}
+.localNav__list--table {
+	width: 84%;
+	margin: 0 auto 40px;
+	border-collapse: separate;  /* セルの間隔を空ける */
+    border-spacing: 15px 0;  /* 左右 上下で記述 */
+}
+.localNav__item--table {
+	width: 	100%;
+}
+.localNav__item--table > a {
+	max-width: 215px;
+}
+/*.hr-a {
+  border: none;
+  margin: 0;
+}*/
+.supply--access {
+	font-size: 86%;
+}
+}
+
+
+
+
+
+/*** ROOM/RATES ***/
+.localNav__list--fl.room {
+	width: 80%;
+	margin: 0 auto 20px;
+}
+.localNav__item--fl {
+	width: 100%;
+	margin-bottom: 15px;
+}
+.localNav__item--fl:last-child {
+}
+.localNav__item--fl > a {
+}
+.localNav__item--fl > a:hover {
+	color: #fff;
+	background: #333;
+}
+.hr-r {
+	margin-bottom: 30px;
+}
+.room__section__h  {
+	font-size: 145%;
+	font-weight: bold;
+	line-height: 1.1;
+}
+.room__section__h__supply {
+	font-size: 70%;
+}
+.room__h__jp {
+	color: #b38e00;
+	font-size: 55%;
+}
+.room__section {
+	margin-bottom: 35px;
+}
+.room__descr {
+	color: #b38e00;
+	/*font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;*/
+	font-weight: bold;
+	font-size: 100%;
+	line-height: 1.45;
+	margin-bottom: 15px;
+}
+.room__specList {
+	font-family: adobe-garamond-pro, "Times New Roman", Times, serif;
+	font-size: 83%;
+	line-height: 1.8;
+	margin-bottom: 30px;
+}
+.room__specList > li {
+	line-height: 1.4;
+	margin-bottom: 3px;
+}
+.room__specTerm {
+	font-weight: bold;
+}
+.room__specDescr {
+	margin-bottom: 7px;
+}
+.room__imgList {
+	margin-bottom: 20px;
+}
+.room__imgList > li {
+	float: left;
+	margin-right: 10px;
+	margin-bottom:8px;
+	border:2px solid #fff;
+}
+.room__imgList > li:nth-child(3n) {
+	margin-right: 0;
+}
+
+@media only screen and (min-width: 650px) {
+.localNav__list--fl.room {
+	width: 100%;
+	margin: 0 auto 20px;
+}
+    .localNav__item--fl:nth-child(3n) {
+        margin-right: 0;
+    }
+.localNav__item--fl {
+    width: 31.5%;
+    /* margin: 0 auto 1.5%; */
+    margin-right: 2.2%;
+    margin-bottom: 1.5%;
+}
+.hr-r {
+	border: none;
+	margin: 0;
+}
+.room__section {
+	margin-bottom: 70px;
+}
+.room__section__h  {
+	font-size: 175%;
+	font-weight: bold;
+	line-height: 0.95;
+}
+.localNav__item--fl:last-child {
+	margin-right: 0;
+}
+.room__section__cont {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+.room__section__infos {
+	vertical-align: top;
+	display: table-cell;
+	width: 51%;
+	padding-right: 4%;
+}
+.room__specList {
+	font-size: 93%;
+}
+.room__section__illust {
+	vertical-align: top;
+	text-align: center;
+	display: table-cell;
+	width: 49%;
+}
+.room__imgList {
+	margin-bottom: 0;
+}
+.room__imgList > li:nth-child(4n) {
+	margin-right: 0px;
+}
+
+.room__imgList > li:nth-child(3n) {
+	margin-right: 10px;
+}
+
+}
+@media only screen and (min-width: 1024px) {
+    .localNav__list--fl.room {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+}
+
+
+
+h1 {
+	margin-bottom: 0;
+}
+
+/* シンプルな見出し */
+.h--sim {
+	font-size: 125%;
+	margin-bottom: 8px;
+}
+
+
+@media only screen and (min-width: 650px) {
+	/*** 見出し 水平ライン付 ***/
+	.horiWrap {
+	  overflow: hidden;
+	}
+	.h--hori {
+	  display: inline-block;
+	  padding-right: 15px;
+	  position: relative;
+	}
+	.h--hori:before,
+	.h--hori:after {
+	 /* background: #777;*/
+	  content: "";
+	  display: block;
+	  height: 1px;
+	  position: absolute;
+		top: 50%;
+	  width: 400%;
+	  border-bottom: 1px dashed #777;
+	}
+	.h--hori:before {
+	  right: 100%;
+	}
+	.h--hori:after {
+	  left: 100%;
+	}
+}
+
+
+
+
+.map-pc {
+	display: none;
+}
+.bywalk__mapBg.map-sp {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.bywalk__mapArea {
+	position: relative;
+	margin-bottom: 23px;
+}
+.bywalk__listH {
+	margin-bottom: 10px;
+    padding-bottom: 6px;
+	line-height: 1.35;
+}
+.bywalk__koList {
+	margin-bottom: 20px;
+}
+.koList__item {
+	font-size: 90%;
+}
+
+
+.bywalk__spot {
+	position: absolute;
+}
+.bywalk__spot > a:hover {
+	background: none;
+}
+.spot--buss1 {
+    bottom: 168px;
+    left: 279px;
+}
+.spot--buss2 {
+    bottom: 168px;
+    left: 123px;
+}
+.spot--buss3 {
+    bottom: 17px;
+    left: 220px;
+}
+.spot--ko1_new {
+top: 84px;
+    left: 117px;}
+.spot--ko2_new {
+    top: 75px;
+    left: 292px;
+}
+.spot--ko1 {
+	top: 165px;
+    left: 7px;
+}
+.spot--ko2 {
+	top: 144px;
+    left: 100px;
+}
+.spot--ko3 {
+top: 105px;
+    left: 366px;
+	}
+.spot--hk1 {
+bottom: 56px;
+    right: 190px;
+	}
+.spot--hk2 {
+	bottom: 55px;
+    left: 365px;
+}
+.spot--hk3 {
+	bottom: 178px;
+    left: 373px;
+}
+.spot--hk1_new {
+    bottom: 16px;
+    left: 227px;
+}
+.bywalk__item.ko:before {
+	background: #fff000;
+}
+.bywalk__item.hk:before {
+		background:#b7e972;
+
+}
+
+.bywalk__item.ko.none:before {
+		background: #f4ac64;
+}
+.bywalk__item.hk.none:before {
+	background: #72d8f7;
+}
+.bywalk__item.bus:before {
+		background: #ff86b4;
+}
+
+/*
+.spot--ko1 {
+	top: 165px;
+    left: 7px;
+}
+.spot--ko2 {
+	top: 144px;
+    left: 100px;
+}
+.spot--ko3 {
+	top: 105px;
+    left: 359px
+}
+.spot--hk1 {
+	bottom: 43px;
+    right: 186px;
+}
+.spot--hk2 {
+	bottom: 42px;
+    left: 365px;
+}
+.spot--hk3 {
+	bottom: 178px;
+    left: 377px;
+}
+*/
+
+.color-hk {
+	color: #fff000;
+	border: 1px solid #000;
+}
+
+.color-ko {
+	position: relative;
+	color: #000;
+}
+
+.color-ko:before {
+　content: "";
+　display: block;
+　position: absolute;
+　top: 1px;
+　left: -4px; 
+　width: 20px;
+　height: 20px;
+　border-radius: 10px;
+　background-color: #f95928;
+　z-index: -1;
+}
+
+
+.bywalk__list {
+	counter-reset:number; /* 名前を付けたカウンターをリセット */
+  list-style:none; /* olが数字を付けることをキャンセル */
+  line-height: 1.5;
+  margin:0 0 30px;
+  padding:0;
+}
+.bywalk__item {
+	  margin-bottom: 7px;
+	  /*text-indent: -1em;
+	  padding-left: 1em;*/
+}
+.bywalk__item:before {
+	font-size: 75%;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.5;
+	counter-increment: number;
+	content: counter(number);
+	width: 1.4em;
+	height: 1.4em;
+	border-radius: 50%;
+	float: left;
+	border: 1px solid #333;
+	margin-top: 2px;
+	margin-right: 4px;
+}
+
+@media only screen and (min-width: 1100px) {
+	.bywalk__cont {
+		width: 90.5%;
+		margin: 0 auto;
+	}
+	.map-sp--ko {
+		display: none;
+	}
+	.map-pc {
+		display: block;
+	}
+	.bywalk__listH {
+		border-bottom: 1px solid #ccc;
+	}
+}
+
+/*** ニュース ***/
+.main__h--topics {
+	margin-bottom: 60px;
+}
+.news__list {
+	margin-bottom: 10px;
+}
+.news__item {
+	border-bottom: 1px dotted  #ccc;
+	margin-bottom: 25px;
+	padding: 0 1% 25px;
+}
+.news__item:first-child {
+	border-top: 1px solid  #d4d4d4;
+	padding-top: 30px;
+}
+.news__item:last-child {
+	border-bottom: 1px solid  #d4d4d4;
+	margin-bottom: 0;
+	padding-bottom: 30px;
+}
+.news__item__tmb {
+	text-align: center;
+	width: 100%;
+	margin-bottom: 12px;
+}
+.news__item__tmb > a {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+	border: 1px solid #fff;
+}
+.news__item__tmb > a:hover {
+	background: none;
+}
+.news__item__main {
+	width: 100%;
+}
+.news__date {
+	font-size: 80%;
+	font-weight: bold;
+	opacity: 0.5;
+}
+.news__title {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.news__body {
+	line-height: 1.55;
+	font-size: 86%;
+}
+.CTnews_thumb {
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat:no-repeat;
+    padding-top: 70%;
+}
+.pagenation__list {
+	overflow: hidden;
+	margin-bottom: 30px;
+	padding: 0 1.3%;
+}
+.pagenation__list__item {
+  float: left;
+  margin-right: 1.8%;
+  font-size: 108%;
+}
+.pagenation__list__item > a {
+	text-decoration: none;
+	padding: 0 4px;
+}
+.pagenation__list__item > a:hover {
+	color: #333;
+	background: #fff100;
+}
+.pagenation__item__current {
+	color: #333;
+	background: #fff100;
+}
+
+@media only screen and (min-width: 650px) {
+	.news__item__tmb {
+		width: 22.25%;
+		float: left;
+		margin-right: 25px;
+	}
+	.news__item__main {
+		width: 72%;
+		float: left;
+	}
+	.news__item__tmb > a {
+		display: block;
+	}
+}
+
+.news__title--article {
+	font-size: 116%;
+	border-bottom: 1px solid  #ccc;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+.news__article {
+	margin-bottom: 15px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid  #CCC;
+}
+.news__article img{margin:1em 0;}
+.news__back {
+	font-size: 93%;
+	margin-bottom: 40px;
+}
+
+
+/*** Facility ***/
+.facility__mainBlock {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 33px;
+    padding-bottom: 20px;
+}
+.facility__mainPics {
+  margin-bottom: 15px;
+}
+.facility__mainPics__big {
+	margin-bottom: 4px;
+}
+.facility__mainPics__small {
+	
+}
+
+.facility__mainSpace__h {
+    line-height: 1.1;
+    margin-bottom: 10px;
+
+}
+.facility__mainSpace__txt {
+	font-size: 90%;
+	line-height: 1.6;
+}
+
+.facility__h__en {
+    font-family: adobe-garamond-pro, serif;
+    font-weight: bold;
+    font-size: 140%;
+    letter-spacing: 0.05em
+        
+}
+
+.facility__h__jp {
+    color: #ab8600;
+    font-size: 75%
+        
+}
+
+.facility__mainPics__item {
+    position: relative;
+    cursor: pointer;
+}
+.facility__mainPics__item > img:hover {
+    opacity: 0.8;
+}
+/*
+.facility__small__item {
+    width: 49.5%;
+    float: left;
+}
+.facility__small__item:last-child {
+    float: right;
+}
+*/
+.btn--plus {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 9px;
+}
+
+.facility__subBlock__media {
+    width: 48.3%;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding-bottom: 15px;
+    margin-right: 2%;
+    margin-bottom: 17px;
+}
+.facility__subBlock__media:nth-child(even) {
+    margin-right: 0;
+}
+
+.facility__media__tmb > img {
+    width: 100%;
+}
+
+.facility__media__title {
+    font-size: 95%;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 8px;
+    padding-bottom: 3px;
+}
+
+.facility__media__tmb {
+    margin-bottom: 10px;
+}
+
+.facility__media__info {
+    padding: 0 6%;
+}
+.facility__media__body {
+  font-size: 90%;
+    line-height: 1.5;
+}
+
+
+
+@media only screen and (min-width: 860px) {
+    .facility__mainBlock {
+        border-bottom: none;
+        margin-bottom: 90px;
+        padding-bottom: 0;
+    }
+    .facility__mainPics__big {
+/*        width: 67.5%;*/
+        width: 50%;
+        margin-bottom: 0;
+    }
+    .facility__mainPics__big--type1 {
+        float: left;
+    }
+    .facility__mainPics__big--type2 {
+        float: left;
+    }
+    .facility__mainPics__small {
+/*        width: 32.3%;*/
+        width: 50%;
+    }
+    .facility__mainPics__small--type1 {
+        float: right;
+    }
+    .facility__mainPics__small--type2 {
+        float: left;
+    }
+    .facility__mainPics__2stagePic {
+        width: 100%;
+        float: none;
+    }
+    .facility__mainPics__2stagePic:first-child {
+        float: none;
+    }
+    .facility__mainSpace__h {
+        line-height: 1.1;    
+        width: 25%;
+        float: left;
+    }
+    .facility__mainSpace__txt {
+        text-align: justify;
+        font-size: 90%;
+        line-height: 1.5;
+        width: 75%;
+        float: left;
+        padding: 0;
+    }
+    
+    .facility__small__item {
+        width: 100%;
+    }
+    .facility__small__item:first-child {
+        margin-bottom: 3px;
+    }
+    
+    .facility__subBlock__media {
+        width: 31.6%;
+        margin-right: 2%;
+    }
+    .facility__subBlock__media:nth-child(even) {
+        margin-right: 2%;
+    }
+    .facility__subBlock__media:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+
+/*** 201807 ***/
+
+/* Home */
+.main__cont {
+    padding: 30px 0;
+}
+.main__h--home {
+    font-size: 205%;
+}
+.main__hTxt--home {
+    font-size: 100%;
+}
+.banners {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 500px;
+    margin: 0 25px 40px;
+    justify-content: space-between;
+}
+.banners img {
+    max-width: 248px;
+}
+.banners__item--fst {
+    margin-right: 13px;
+}
+.banners img {
+    border: 1px solid rgba(255,255,255,1);
+    border-radius: 7px;
+}
+.top__reservationBtn__link {
+	border-width: 2px;
+}
+@media only screen and (min-width:768px) {
+    .main__cont {
+		padding:40px 30px 0;
+	}
+    .main__h--home {
+        font-size: 245%;
+        margin-bottom: 23px;
+    }
+    .main__hTxt--home {
+        font-size: 110%;
+        margin-bottom: 40px;
+    }
+    .hr--c {
+        margin: 0 auto 24px;
+    }
+    .banners {
+        width: 520px;
+        margin: 0 auto 45px;
+    }
+    .banners img {
+        border: 2px solid rgba(255,255,255,1);
+    }
+    .banners img:hover {
+        border: 2px solid #fff000;
+    }
+    .banners__item--fst {
+        margin-right: 35px;
+    }
+}
+
+/* Reservation */
+.top__reservationBtn {
+    width: auto;
+/*	width: 300px;*/
+	margin: 0 25px 55px;
+}
+@media only screen and (min-width: 650px) {
+    .top__reservationBtn {
+    	width: 300px;
+        margin: 0 auto 75px;
+    }
+}
+
+
+/*** Room 12/29 ***/
+.room__imgList img {
+    max-width: 80px;
+}
+
+
+/*** FAQ ***/
+.faqList__term {
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-top: 17px;
+    padding-top: 17px;
+}
+.faqList__term:hover {
+    opacity: 0.7;
+    transform: 0.2s;
+}
+.faqList {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 60px;
+    padding-bottom: 17px;
+}
+.faqList__desc {
+    font-size: 93%;
+    display: none;
+}
+
+
+/*** Facility ***/
+.facility__imgsUnit--2 {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.facility__imgsUnit--4 {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 2px;
+}
+
+.facility__imgsUnits {
+    margin-bottom: 15px;
+}
+.facility__imgsUnit__item {
+    position: relative;
+}
+.facility__imgsUnit--1__item {
+    margin-bottom: 2px;
+}
+.facility__imgsUnit--2__item {
+    width: calc(50% - 1px);
+}
+.facility__imgsUnit__clm {
+    width: calc(50% - 1px);
+}
+.facility__imgsUnit__clm:first-child {
+    margin-right: 2px;
+}
+.facility__imgsUnit__item:nth-child(odd) {
+    margin: 0 2px 2px 0;
+}
+.facility__clm__item {
+    position: relative;
+}
+.facility__clm__item:nth-child(odd) {
+    margin-bottom: 2px;
+}
+@media only screen and (min-width:768px) {
+    .facility__imgsUnits {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+    }
+    .facility__imgsUnit {
+        width: 50%;
+    }
+    .facility__clm__item, .facility__imgsUnit__item {
+        cursor: pointer;
+    }
+    .facility__clm__item:hover, .facility__imgsUnit__item:hover {
+        opacity: .8;
+        transition: .2s;
+    }
+}
+
+

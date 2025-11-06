@@ -1,0 +1,750 @@
+/*
+/ 三条 - 英
+*/
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1.5em 0;
+    padding: 0;
+}
+
+
+
+/* ==========================================================================
+   Custom base styles
+   ========================================================================== */
+/*
+// ボックス要素
+*/
+body {
+	font-family: "futura-pt", "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #333;
+	letter-spacing: 0.05em;
+	background: url(../images/bg3.png) left top repeat #fff;
+}
+
+.wrapper {
+	position: relative;
+}
+footer {
+	text-align: center;
+}
+nav {
+	
+}
+section {
+	
+}
+
+/*
+// 個別要素
+*/
+
+p {
+	padding: 6px 0;
+}
+a {
+	color: inherit;
+}
+a:hover {
+	text-decoration: none;
+	color: #000;
+	background: #FFEF00;
+}
+
+/* ==========================================================================
+   ヘッダー
+   ========================================================================== */
+.header {
+	background: #111;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+.header-container {
+    position: absolute;
+    bottom: 0;
+}
+.header__logo {
+	font-size: 0.75em;
+	text-align: center;
+	padding: 18px 0px;
+}
+.header__logo > a:hover {
+	background: none;
+}
+.header__logo img {
+	max-width: 205px;
+}
+.header__hamburger {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+.header__booking {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.hamburger {
+	cursor: pointer;
+   /* position: fixed;
+    left: -15px;
+    opacity: 0.5;*/
+}
+@media only screen and (min-width: 350px) {
+	.header__logo img {
+		max-width: 240px;
+	}
+}
+@media only screen and (min-width: 650px) {
+	.header {
+		display: none;
+	}
+}
+
+/* ==========================================================================
+   サイドバー
+   ========================================================================== */
+.side {
+	color: #fff;
+	font-family: "futura-pt",sans-serif;
+	font-size: 108%;
+	font-weight: bold;
+	background: url(../images/bg_debut_dark.png) left top repeat;
+	padding-top: 25px;
+}
+.side__cont {
+	padding-left: 20px;
+}
+.side__logo {
+	display: none;
+	/*bottom: 100px;*/
+}
+.side__logo a:hover {
+	background: none;
+}
+.side__logo img {
+}
+.current--nav {
+	color: #333;
+	background: #fff100;
+}
+.clouds1 {
+	display: none;
+}
+.nav__list {
+	margin-bottom: 30px;
+}
+.nav__list__item {
+  	display: block;
+	margin-bottom: 10px;
+}
+.nav__list__item.cs {
+	padding: 2px 4px;
+}
+.nav__list__item > a {
+	text-decoration: none;
+	padding: 1px 3px;
+}
+.nav__item--lang {
+	font-size: 93%;
+	font-weight: normal;
+	letter-spacing: 0.06em;
+	margin-left: 4px;
+}
+.lang__sepa {
+	opacity: 0.3;
+	padding: 0 2px;
+}
+.nav__item--lang > a {
+	text-decoration: none;
+	padding: 1px 3px;
+}
+.nav__item__cs {
+	opacity: 0.3;
+}
+
+@media only screen and (min-width: 650px) {
+	.side {
+	}
+	.side__cont {
+		padding-top: 150px;
+	}
+.side__logo {
+	display: block;
+	position: absolute;
+	left: 25px;
+	bottom: 45px;
+}
+	.clouds1 {
+		display: block;
+		position: fixed;
+		left: -35px;
+		top: -60px;
+		z-index: 999;
+		pointer-events: none;
+	}
+}
+
+/*** レスポンシブナビ等 ***/
+.menu-panel, .main, .swipe, .fade-layer {
+	top: 0;
+    float: left;
+    min-height: 100%;
+}
+.menu-panel {
+    position: fixed;
+    top: auto;
+   	width: 190px;
+	  z-index: 500;
+	  left: -190px;
+    transition: all 0.4s;
+}
+.menu-open {
+    -webkit-transform: translate(190px, 0);
+          transform: translate(190px, 0);
+}
+.swipe {
+    position: fixed;
+    min-width: 20px;
+}
+.fade-layer {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    opacity:0.5;
+    visibility: hidden;
+    z-index:1;
+    transition: background-color 0.4s;
+}
+@media only screen and (min-width: 650px) {
+    .menu-panel {
+        left: 0px;
+        /*top: 60px;*/
+    }
+    .main, .swipe {
+        position: absolute;
+        top: auto;
+        left: 190px;
+    }
+    .header-panel {
+        height: 60px;
+    }
+    .hamburger {
+        visibility: hidden;
+    }
+.nav__list__item {
+  	display: block;
+	margin-bottom: 7px;
+}
+.main {
+	width: 100%;
+	margin-left: -190px;
+}	
+}
+
+/* ==========================================================================
+   フッター
+   ========================================================================== */
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #aaa;
+	font-size: 76%;
+	background: #111;
+	padding-top: 15px;
+	padding-bottom: 12px;
+}
+.footer__list {
+	margin-bottom: 15px;
+}
+.footer__phLinks {
+	text-align: center;
+	font-family: "futura-pt", sans-serif;
+}
+.footerInfo__item {
+	text-align: center;
+	display: block;
+}
+/*@media only screen and (min-width: 768px) {
+	.footer {
+		font-size: 80%;
+		padding-left: 190px;
+	}
+	.footerInfo__item {
+		text-align: left;
+		display: inline;
+		margin: 0 20px 0 0;
+	}
+	.footerInfo__above {
+		display: block;
+		width: inherit;
+		max-width: inherit;
+		float: left;
+		margin: 0 0 8px;
+	}
+	.footerInfo__item.above {
+		text-align: center;
+		display: block;
+		float: left;
+	}
+	.footerInfo__below {
+		float: left;
+		margin-bottom: 0;
+	}
+	.footer__phLinks {
+		text-align: left;
+		clear: both;
+	}
+}
+*/
+@media only screen and (min-width: 768px) {
+	.footer {
+		font-size: 80%;
+		padding-left: 190px;
+	}
+}
+@media only screen and (min-width: 1150px) {
+	.footer {
+		font-size: 80%;
+		padding-left: 190px;
+	}
+	.footer__cont {
+		position: relative;
+		padding: 0 25px;
+	}
+	.footer__list {
+		margin-bottom: 0;
+	}
+	.footer__phLinks {
+		text-align: right;
+		position: absolute;
+		right: 30px;
+		bottom: 0;
+	}
+	.footerInfo__above {
+		display: block;
+		width: inherit;
+		max-width: inherit;
+		float: left;
+		margin: 0 0 8px;
+	}
+	.footerInfo__item {
+		text-align: left;
+		display: inline;
+		margin: 0 20px 0 0;
+	}
+	.footerInfo__below {
+		float: left;
+		margin-bottom: 0;
+	}
+	.footerInfo__item.above {
+		text-align: center;
+		display: block;
+		float: left;
+	}
+	.footer__copyright {
+		color: #999;
+		font-size: 70%;
+		text-align: right;
+		clear: both;
+	}
+}
+
+
+.content {
+    width: 100%;
+    min-height: 100%;
+}
+
+/* ==========================================================================
+   メインエリア
+   ========================================================================== */
+.main {
+	border-top: 3px solid #333;
+}
+.main__container {
+	padding: 40px 20px;
+}
+.main__visual--top {
+	height: 290px;
+}
+.main__h {
+	font-family: "futura-pt",sans-serif;
+	font-size: 195%;
+	text-align: center;
+	letter-spacing: 0.03em;
+	margin-bottom: 70px;
+}
+.bbar {
+	border-bottom: 4px solid #333;
+    padding: 0 0 5px;
+}
+.main__hTxt {
+	margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 650px) {
+	.main__visual--top {
+		height: 420px;
+		margin-left: 190px;
+		/*padding-left: 190px;*/
+	}
+	.main__container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding-left: 190px;
+	}
+	.main__cont {
+		padding: 0 30px;
+	}
+}
+
+
+/*** 装飾 ***/
+@media only screen and (min-width: 650px) {
+}
+
+
+/*** ローカルナビ ***/
+.main__localNav {
+	font-size: 86%;
+	margin-bottom: 40px;
+}
+/* テーブル */
+.localNav__list--table {
+}
+.localNav__item--table {
+	text-align: center;
+}
+.localNav__item--table > a {
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	border: 2px solid #333;
+	margin-bottom: 13px;
+	padding: 5px;
+}
+.localNav__item--table > a:hover {
+	color: #fff;
+	background: #333;
+}
+/* フロート */
+.localNav__list--fl {
+}
+.localNav__item--fl {
+	text-align: center;
+	float: left;
+}
+.localNav__item--fl > a {
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	border: 2px solid #333;
+	padding: 6px;
+}
+.localNav__item--fl > a:hover {
+	color: #fff;
+	background: #333;
+}
+@media only screen and (min-width: 650px) {
+	/* テーブル */
+	.localNav__list--table {
+		display: table;
+		table-layout: fixed;
+	}
+	.localNav__item--table {
+		display: table-cell;
+		text-align: center;
+	}
+	.localNav__item--table > a {
+		font-weight: bold;
+		text-decoration: none;
+		display: block;
+		border: 2px solid #333;
+		padding: 5px;
+	}
+	.localNav__item--table > a:hover {
+		color: #fff;
+		background: #333;
+	}
+	
+	/* フロート */
+	.localNav__list--fl {
+	}
+	.localNav__item--fl {
+		text-align: center;
+		float: left;
+	}
+	.localNav__item--fl > a {
+	}
+	.localNav__item--fl > a:hover {
+		color: #fff;
+		background: #333;
+	}
+}
+
+
+/* 予約ボタン */
+.reservationBtn {
+	display: none;
+}
+@media only screen and (min-width: 650px) {
+	.reservationBtn {
+		display: block;
+		color: #fff;
+		font-family: "adobe-garamond-pro",sans-serif;
+		font-size: 116%;
+		letter-spacing: 0.12em;
+		text-align: left;
+		background-image: url(../images/reservation-tri-w.png), url(../images/dark_stripes_bg.png);
+		background-repeat: no-repeat, repeat;
+		background-position: right 14px center, left top;
+	
+		position: fixed;
+		right: 15px;
+		bottom: 0;
+        z-index: 9998;
+		cursor: pointer;
+		padding: 11px 31px 11px 20px;
+	}
+	.reservationBtn:hover {
+		background-image: url(../images/reservation-tri-w.png), none;
+		background-color: #444;
+	}
+	.reservationBtn__jp {
+		font-size: 70%;
+	}
+}
+
+
+
+.hr--c {
+	border: none;
+	border-bottom: 4px solid #333;
+	width: 120px;
+	margin: 0 auto 28px;
+}
+.hr--lt {
+	border-top: 3px solid #333;
+	width: 78px;
+	margin-bottom: 0.55em;
+}
+.h--l {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 3px;
+}
+.h--l__sub {
+	color: #b38e00;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 70%;
+	font-style: italic;
+	padding-left: 6px;
+}
+
+
+select {
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none transparent;
+  vertical-align: top;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: 0.04em;
+  box-sizing: content-box;
+  color: #1b1b1b;
+  background: #fff;
+}
+select[name="hi_id"] {
+    min-width: 265px;
+}
+select[name="dt_yyyymm"] {
+    min-width: 130px;
+}
+option {
+  font-size: 80% !important;
+}
+.bmodule {
+	color: #fff;
+}
+.bmodule__unit {
+	margin-bottom: 8px;
+}
+.bmodule__unit--date {
+	margin-bottom: 30px;
+}
+.bmodule__unit dt {
+	margin-bottom: 5px;
+	font-size: 93%;
+}
+.bmodule__search {
+	font-weight: bold;
+}
+.bmodule__searchBtn {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: none;
+	border: none;
+	color: #fff;
+	border: 3px solid #fff;
+	padding: 6px 45px;
+	
+	font-weight: bold;
+	font-size: 93%;
+	letter-spacing: 0.06em;
+}
+.bmodule__searchBtn:hover {
+	background: #fff;
+	color: #333;
+}
+.main__h--overlay {
+	font-size: 170%;
+	margin-bottom: 25px;
+}
+.bbar--overlay {
+	color: #fff;
+	border-bottom-color: #fff;
+}
+.bmodule__supply {
+	font-size: 70%;
+}
+@media only screen and (min-width: 650px) {
+	.bmodule__unit {
+		margin-bottom: 20px;
+	}
+	.bmodule__unit--date {
+		margin-bottom: 38px;
+	}
+	.main__h--overlay {
+		margin-bottom: 40px;
+	}
+	.bmodule__unit dt {
+		font-size: 108%;
+	}
+	.bmodule__unit dd {
+		font-size: 108%;
+	}
+}
+
+/*** Page Top ***/
+.pagetop {
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	display: none;
+	cursor: pointer;
+	opacity: 1;
+}
+.pagetop > img {
+	width: 40px;
+	background: rgb(245,242,239);
+}
+@media only screen and (min-width: 650px) {
+	.pagetop:hover {
+		opacity: 0.7;
+	}
+	.pagetop > img {
+		width: 50px;
+	}
+}
+
+
+
+/* ==========================================================================
+   フッター
+   ========================================================================== */
+/*.footer__copyright {
+	float: none;
+}
+.footer__socials {
+	margin-bottom: 3px;
+}
+.footer__socials .fa {
+	font-size: 155%;
+	margin-left: 12px;
+}
+.footer--top__item {
+	margin-right: 25px;
+}*/
+
+.fa--sm {
+	font-size: 93% !important;
+	padding-left: 1px;
+}
+
+.bd-lt {
+	border-top: 1px solid #989898;
+	width: 20px;
+	display: block;
+	margin-bottom: 15px;
+	display: none;
+}
+
+
+
+/*** 22P Banner ***/
+.banner--pc {
+    display: none;
+}
+.banner--sp {
+    text-align: center;
+    margin: 10px 0 30px;
+}
+@media only screen and (min-width:1024px) {
+    .banner--pc {
+        display: block;
+        position: fixed;
+        right: 18px;
+        bottom: 38px;
+    }
+    .home .banner--pc {
+        bottom: 60px;
+    }
+    .banner--pc a {
+        background: none;
+    }
+    .banner--sp {
+        display: none;
+    }
+}
+
+
+/*** New Heading ***/
+.heading--thd {
+    font-family: adobe-garamond-pro, serif;
+    font-size: 180%;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.heading--lgThd {
+    font-family: adobe-garamond-pro, serif;
+    font-size: 180%;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin: 45px 0;
+}

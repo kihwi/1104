@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vida Hostel Lisbon | News</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar__logo">
+        <span>VIDA HOSTEL</span>
+        <span>LISBON</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="news.html">News</a>
+        <a href="facilities.html">Facility</a>
+        <a href="rooms.html">Room/Rates</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="access.html">Access</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <div class="sidebar__footer">
+        <div class="contact">
+          <span>hello@vidahostellisbon.com</span>
+          <span>+351 21 000 1234</span>
+          <span>Rua Nova da Vida 27, Lisboa</span>
+        </div>
+        <div class="langs">EN / PT</div>
+      </div>
+    </aside>
+
+    <main>
+      <header
+        class="page-hero"
+        style="background-image: url('../img/andreas-brucker-X87yB-jvYHw-unsplash.jpg');"
+      >
+        <div class="page-hero__content">
+          <div class="page-hero__eyebrow">Updates</div>
+          <h1>Hostel News & Notices</h1>
+          <p>
+            Fresh programming, operational updates, and stories from Vida Hostel
+            Lisbon. Bookmark this page to stay ahead of seasonal happenings.
+          </p>
+          <div class="breadcrumbs">Home / News</div>
+        </div>
+      </header>
+
+      <section class="section" aria-labelledby="latest-news">
+        <h2 id="latest-news" class="section__heading">Latest Highlights</h2>
+        <div class="section__intro">
+          From art walks to maintenance windows, every note is here so you can
+          plan with confidence.
+        </div>
+        <div id="news-grid" class="news-grid" aria-live="polite"></div>
+        <p id="news-empty" class="section__intro" style="display:none;">
+          New stories are brewing. Check back soon or follow us on Instagram for daily updates.
+        </p>
+        <button id="news-load-more" class="load-more" type="button" style="display:none;">
+          Load more updates
+        </button>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__section">
+          <h5>Contact</h5>
+          <ul>
+            <li>hello@vidahostellisbon.com</li>
+            <li>+351 21 000 1234</li>
+            <li>Rua Nova da Vida 27, Lisboa</li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h5>Follow</h5>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Spotify</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+    <script src="scripts/news.js"></script>
+  </body>
+</html>
