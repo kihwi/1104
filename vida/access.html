@@ -8,26 +8,40 @@
   </head>
   <body>
     <aside class="sidebar">
-      <div class="sidebar__logo">
-        <span>VIDA HOSTEL</span>
-        <span>LISBON</span>
-      </div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="news.html">News</a>
-        <a href="facilities.html">Facility</a>
-        <a href="rooms.html">Room/Rates</a>
-        <a href="reservation.html">Reservation</a>
-        <a class="active" href="access.html">Access</a>
-        <a href="faq.html">FAQ</a>
-      </nav>
-      <div class="sidebar__footer">
-        <div class="contact">
-          <span>hello@vidahostellisbon.com</span>
-          <span>+351 21 000 1234</span>
-          <span>Rua Nova da Vida 27, Lisboa</span>
+      <div class="sidebar__top">
+        <div class="sidebar__logo">
+          <span>VIDA HOSTEL</span>
+          <span>LISBON</span>
         </div>
-        <div class="langs">EN / PT</div>
+        <button
+          class="sidebar__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar-panel"
+          data-sidebar-toggle
+        >
+          <span class="sidebar__toggle-label">Menu</span>
+          <span class="sidebar__toggle-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="sidebar__panel" id="sidebar-panel" data-sidebar-panel>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="news.html">News</a>
+          <a href="facilities.html">Facility</a>
+          <a href="rooms.html">Room/Rates</a>
+          <a href="reservation.html">Reservation</a>
+          <a class="active" href="access.html">Access</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="contact">
+            <span>hello@vidahostellisbon.com</span>
+            <span>+351 21 000 1234</span>
+            <span>Rua Nova da Vida 27, Lisboa</span>
+          </div>
+          <div class="langs">EN / PT</div>
+        </div>
       </div>
     </aside>
 
@@ -111,5 +125,6 @@
         </div>
       </footer>
     </main>
+    <script src="scripts/menu.js"></script>
   </body>
 </html>

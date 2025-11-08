@@ -1,0 +1,24 @@
+{
+  "name": "1104",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:e2e",
+    "test:e2e": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kihwi/1104.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kihwi/1104/issues"
+  },
+  "homepage": "https://github.com/kihwi/1104#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.48.2"
+  }
+}
