@@ -50,11 +50,21 @@
         <div
           class="hero__slides"
           data-images='[
-            "img/aayush-gupta-ljhCEaHYWJ8-unsplash.jpg",
-            "img/andreas-brucker-X87yB-jvYHw-unsplash.jpg",
-            "img/elisadventure-iljCg5q6WEY-unsplash.jpg"
+            "img/aayush-gupta-ljhCEaHYWJ8-unsplash",
+            "img/andreas-brucker-X87yB-jvYHw-unsplash",
+            "img/elisadventure-iljCg5q6WEY-unsplash"
           ]'
-          style="background-image: url('img/aayush-gupta-ljhCEaHYWJ8-unsplash.jpg');"
+          style="
+            background-image: url('img/aayush-gupta-ljhCEaHYWJ8-unsplash-1280.jpg');
+            background-image: image-set(
+              url('img/aayush-gupta-ljhCEaHYWJ8-unsplash-768.webp') type('image/webp') 1x,
+              url('img/aayush-gupta-ljhCEaHYWJ8-unsplash-1280.webp') type('image/webp') 1.5x,
+              url('img/aayush-gupta-ljhCEaHYWJ8-unsplash-1920.webp') type('image/webp') 2x,
+              url('img/aayush-gupta-ljhCEaHYWJ8-unsplash-768.jpg') type('image/jpeg') 1x,
+              url('img/aayush-gupta-ljhCEaHYWJ8-unsplash-1280.jpg') type('image/jpeg') 1.5x,
+              url('img/aayush-gupta-ljhCEaHYWJ8-unsplash-1920.jpg') type('image/jpeg') 2x
+            );
+          "
         ></div>
         <div class="hero__content">
           <div class="hero__eyebrow">Boutique Hostel</div>
@@ -134,15 +144,37 @@
       (function () {
         const slides = document.querySelector('.hero__slides');
         if (!slides) return;
+
+        const toBase = (value) => value.replace(/\.(?:jpe?g|png|webp)$/i, '');
+
         try {
-          const images = JSON.parse(slides.dataset.images || '[]');
+          const rawImages = JSON.parse(slides.dataset.images || '[]');
+          const images = rawImages.map(toBase);
           if (!images.length) return;
+
+          const buildImageSet = (base) =>
+            `image-set(
+              url('${base}-768.webp') type('image/webp') 1x,
+              url('${base}-1280.webp') type('image/webp') 1.5x,
+              url('${base}-1920.webp') type('image/webp') 2x,
+              url('${base}-768.jpg') type('image/jpeg') 1x,
+              url('${base}-1280.jpg') type('image/jpeg') 1.5x,
+              url('${base}-1920.jpg') type('image/jpeg') 2x
+            )`;
+
+          const applyBackground = (base) => {
+            slides.style.backgroundImage = `url('${base}-1280.jpg')`;
+            slides.style.backgroundImage = buildImageSet(base);
+          };
+
           let index = 0;
+          applyBackground(images[index]);
+
           setInterval(() => {
             index = (index + 1) % images.length;
             slides.style.opacity = 0;
             setTimeout(() => {
-              slides.style.backgroundImage = `url('${images[index]}')`;
+              applyBackground(images[index]);
               slides.style.opacity = 1;
             }, 600);
           }, 6000);

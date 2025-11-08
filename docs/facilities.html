@@ -48,7 +48,17 @@
     <main>
       <header
         class="page-hero"
-        style="background-image: url('img/elisadventure-iljCg5q6WEY-unsplash.jpg');"
+        style="
+          background-image: url('img/elisadventure-iljCg5q6WEY-unsplash-1280.jpg');
+          background-image: image-set(
+            url('img/elisadventure-iljCg5q6WEY-unsplash-768.webp') type('image/webp') 1x,
+            url('img/elisadventure-iljCg5q6WEY-unsplash-1280.webp') type('image/webp') 1.5x,
+            url('img/elisadventure-iljCg5q6WEY-unsplash-1920.webp') type('image/webp') 2x,
+            url('img/elisadventure-iljCg5q6WEY-unsplash-768.jpg') type('image/jpeg') 1x,
+            url('img/elisadventure-iljCg5q6WEY-unsplash-1280.jpg') type('image/jpeg') 1.5x,
+            url('img/elisadventure-iljCg5q6WEY-unsplash-1920.jpg') type('image/jpeg') 2x
+          );
+        "
       >
         <div class="page-hero__content">
           <div class="page-hero__eyebrow">Spaces</div>
@@ -71,7 +81,31 @@
 
         <div class="facility-grid">
           <article class="facility-card">
-            <img src="img_facility/alexandra-gorn-JIUjvqe2ZHg-unsplash.jpg" alt="Calma lounge with sofa and indoor greenery" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  img_facility/alexandra-gorn-JIUjvqe2ZHg-unsplash-800.webp 800w,
+                  img_facility/alexandra-gorn-JIUjvqe2ZHg-unsplash-1200.webp 1200w,
+                  img_facility/alexandra-gorn-JIUjvqe2ZHg-unsplash-1600.webp 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  img_facility/alexandra-gorn-JIUjvqe2ZHg-unsplash-800.jpg 800w,
+                  img_facility/alexandra-gorn-JIUjvqe2ZHg-unsplash-1200.jpg 1200w,
+                  img_facility/alexandra-gorn-JIUjvqe2ZHg-unsplash-1600.jpg 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <img
+                src="img_facility/alexandra-gorn-JIUjvqe2ZHg-unsplash-1200.jpg"
+                alt="Calma lounge with sofa and indoor greenery"
+                loading="lazy"
+              />
+            </picture>
             <div>
               <h3>Calma Lounge</h3>
               <p>
@@ -82,7 +116,31 @@
           </article>
 
           <article class="facility-card">
-            <img src="img_facility/andy-vult-zwZpdhoTbU0-unsplash.jpg" alt="Atrium with glass walls and plants" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  img_facility/andy-vult-zwZpdhoTbU0-unsplash-800.webp 800w,
+                  img_facility/andy-vult-zwZpdhoTbU0-unsplash-1200.webp 1200w,
+                  img_facility/andy-vult-zwZpdhoTbU0-unsplash-1600.webp 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  img_facility/andy-vult-zwZpdhoTbU0-unsplash-800.jpg 800w,
+                  img_facility/andy-vult-zwZpdhoTbU0-unsplash-1200.jpg 1200w,
+                  img_facility/andy-vult-zwZpdhoTbU0-unsplash-1600.jpg 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <img
+                src="img_facility/andy-vult-zwZpdhoTbU0-unsplash-1200.jpg"
+                alt="Atrium with glass walls and plants"
+                loading="lazy"
+              />
+            </picture>
             <div>
               <h3>Winter Garden Atrium</h3>
               <p>
@@ -93,7 +151,31 @@
           </article>
 
           <article class="facility-card">
-            <img src="img_facility/christopher-jolly-GqbU78bdJFM-unsplash.jpg" alt="Private nook bedroom detail" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  img_facility/christopher-jolly-GqbU78bdJFM-unsplash-800.webp 800w,
+                  img_facility/christopher-jolly-GqbU78bdJFM-unsplash-1200.webp 1200w,
+                  img_facility/christopher-jolly-GqbU78bdJFM-unsplash-1600.webp 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  img_facility/christopher-jolly-GqbU78bdJFM-unsplash-800.jpg 800w,
+                  img_facility/christopher-jolly-GqbU78bdJFM-unsplash-1200.jpg 1200w,
+                  img_facility/christopher-jolly-GqbU78bdJFM-unsplash-1600.jpg 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <img
+                src="img_facility/christopher-jolly-GqbU78bdJFM-unsplash-1200.jpg"
+                alt="Private nook bedroom detail"
+                loading="lazy"
+              />
+            </picture>
             <div>
               <h3>Private Nook Rooms</h3>
               <p>
@@ -104,7 +186,31 @@
           </article>
 
           <article class="facility-card">
-            <img src="img_facility/drew-coffman-jUOaONoXJQk-unsplash.jpg" alt="Brickwork communal kitchen and bar" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  img_facility/drew-coffman-jUOaONoXJQk-unsplash-800.webp 800w,
+                  img_facility/drew-coffman-jUOaONoXJQk-unsplash-1200.webp 1200w,
+                  img_facility/drew-coffman-jUOaONoXJQk-unsplash-1600.webp 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  img_facility/drew-coffman-jUOaONoXJQk-unsplash-800.jpg 800w,
+                  img_facility/drew-coffman-jUOaONoXJQk-unsplash-1200.jpg 1200w,
+                  img_facility/drew-coffman-jUOaONoXJQk-unsplash-1600.jpg 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <img
+                src="img_facility/drew-coffman-jUOaONoXJQk-unsplash-1200.jpg"
+                alt="Brickwork communal kitchen and bar"
+                loading="lazy"
+              />
+            </picture>
             <div>
               <h3>Brickwork Kitchen &amp; Bar</h3>
               <p>
@@ -115,7 +221,31 @@
           </article>
 
           <article class="facility-card">
-            <img src="img_facility/jon-stebbe-paydk0JcIOQ-unsplash.jpg" alt="Sunlit commons area with seating" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  img_facility/jon-stebbe-paydk0JcIOQ-unsplash-800.webp 800w,
+                  img_facility/jon-stebbe-paydk0JcIOQ-unsplash-1200.webp 1200w,
+                  img_facility/jon-stebbe-paydk0JcIOQ-unsplash-1600.webp 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  img_facility/jon-stebbe-paydk0JcIOQ-unsplash-800.jpg 800w,
+                  img_facility/jon-stebbe-paydk0JcIOQ-unsplash-1200.jpg 1200w,
+                  img_facility/jon-stebbe-paydk0JcIOQ-unsplash-1600.jpg 1600w
+                "
+                sizes="(min-width: 1100px) 45vw, 100vw"
+              />
+              <img
+                src="img_facility/jon-stebbe-paydk0JcIOQ-unsplash-1200.jpg"
+                alt="Sunlit commons area with seating"
+                loading="lazy"
+              />
+            </picture>
             <div>
               <h3>Sunlit Commons</h3>
               <p>
