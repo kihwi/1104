@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vida Hostel Lisbon | Rooms & Rates</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar__top">
+        <div class="sidebar__logo">
+          <span>VIDA HOSTEL</span>
+          <span>LISBON</span>
+        </div>
+        <button
+          class="sidebar__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar-panel"
+          data-sidebar-toggle
+        >
+          <span class="sidebar__toggle-label">Menu</span>
+          <span class="sidebar__toggle-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="sidebar__panel" id="sidebar-panel" data-sidebar-panel>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="news.html">News</a>
+          <a href="facilities.html">Facility</a>
+          <a class="active" href="rooms.html">Room/Rates</a>
+          <a href="reservation.html">Reservation</a>
+          <a href="access.html">Access</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="contact">
+            <span>hello@vidahostellisbon.com</span>
+            <span>+351 21 000 1234</span>
+            <span>Rua Nova da Vida 27, Lisboa</span>
+          </div>
+          <div class="langs">EN / PT</div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header
+        class="page-hero"
+        style="background-image: url('../img/aayush-gupta-ljhCEaHYWJ8-unsplash.jpg');"
+      >
+        <div class="page-hero__content">
+          <div class="page-hero__eyebrow">Stay Options</div>
+          <h1>Rooms & Rates</h1>
+          <p>
+            Stay flexible with private doubles, design-forward pods, and lofted
+            suites — each crafted with fast Wi-Fi, curated Lisbon guides, and
+            materials chosen for slow mornings.
+          </p>
+          <div class="breadcrumbs">Home / Rooms & Rates</div>
+        </div>
+      </header>
+
+      <section class="section" aria-labelledby="room-collection">
+        <h2 id="room-collection" class="section__heading">Choose Your Canvas</h2>
+        <p class="section__intro">
+          Every room combines sustainable textures, layered lighting, and
+          handcrafted Lisbon touches. Pricing shown in Euros per night.
+        </p>
+
+      <div class="room-cards">
+        <article class="room-card">
+          <img src="../img_facility/jon-stebbe-paydk0JcIOQ-unsplash.jpg" alt="Private terrace double with seating area" />
+          <div>
+            <h3>Private Terrace Double</h3>
+            <div class="price">€135 – €165 / night</div>
+            <ul>
+              <li>Private balcony facing Bairro Alto rooftops</li>
+              <li>Rainfall shower stocked with Portuguese botanicals</li>
+              <li>Dedicated workspace with dual outlets</li>
+            </ul>
+            <a class="secondary-link" href="reservation.html">Check availability →</a>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <img src="../img_facility/andy-vult-zwZpdhoTbU0-unsplash.jpg" alt="Design pod dorm with modern bunks" />
+          <div>
+            <h3>Design Pod Dorm</h3>
+            <div class="price">€34 – €48 / night</div>
+            <ul>
+              <li>8-bed mixed pod with privacy curtains</li>
+              <li>Ambient lighting, USB-C charging, personal locker</li>
+              <li>Soundsoft mattress with fresh linens daily</li>
+            </ul>
+            <a class="secondary-link" href="reservation.html">Reserve a pod →</a>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <img src="../img_facility/christopher-jolly-GqbU78bdJFM-unsplash.jpg" alt="Superior loft suite with mezzanine lounge" />
+          <div>
+            <h3>Superior Loft Suite</h3>
+            <div class="price">€185 – €220 / night</div>
+            <ul>
+              <li>Mezzanine lounge with curated Lisbon vinyl collection</li>
+              <li>Kitchenette, espresso set, and stocked minibar</li>
+              <li>River glimpses and blackout drapes for late mornings</li>
+            </ul>
+            <a class="secondary-link" href="reservation.html">Plan your suite →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Private Terrace Double</th>
+              <th>Design Pod Dorm</th>
+              <th>Superior Loft Suite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Capacity</th>
+              <td>2 guests</td>
+              <td>1 guest per pod</td>
+              <td>Up to 3 guests</td>
+            </tr>
+            <tr>
+              <th scope="row">Ensuite</th>
+              <td>Yes</td>
+              <td>Shared designer bathrooms</td>
+              <td>Yes, spa shower</td>
+            </tr>
+            <tr>
+              <th scope="row">Workspace</th>
+              <td>Dedicated desk &amp; chair</td>
+              <td>Communal cowork lounge</td>
+              <td>Studio desk + lounge table</td>
+            </tr>
+            <tr>
+              <th scope="row">Breakfast Add-On</th>
+              <td>Weekend continental €12</td>
+              <td>Weekend continental €12</td>
+              <td>In-room breakfast tray €18</td>
+            </tr>
+            <tr>
+              <th scope="row">Housekeeping</th>
+              <td>Daily</td>
+              <td>Every other day</td>
+              <td>Daily with turndown</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="policy-ribbon">
+        Flexible cancellation up to 48h prior · Group bookings available on request · Pricing includes VAT
+      </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__section">
+          <h5>Contact</h5>
+          <ul>
+            <li>hello@vidahostellisbon.com</li>
+            <li>+351 21 000 1234</li>
+            <li>Rua Nova da Vida 27, Lisboa</li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h5>Follow</h5>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Spotify</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+    <script src="scripts/menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "spring-art-walk",
+    "date": "2025-03-15",
+    "displayDate": "15 Mar 2025",
+    "title": "Spring Art Walk Packages Release",
+    "excerpt": "Reserve now to receive gallery passes, sunset tram tickets, and rooftop welcome drinks during Lisbon's art season.",
+    "image": "../img/elisadventure-iljCg5q6WEY-unsplash.jpg",
+    "categories": ["Events", "Offers"],
+    "body": [
+      "Lisbon’s spring gallery circuit is back and we’re celebrating with a curated stay package for design lovers.",
+      "Book any stay in March or April and receive two multi-gallery passes, a sunset ride on historic Tram 28, and access to our Friday rooftop sessions.",
+      "Add the package during booking or email our team after reserving. Quantities are limited each weekend." 
+    ]
+  },
+  {
+    "id": "cowork-lounge-refresh",
+    "date": "2025-03-02",
+    "displayDate": "02 Mar 2025",
+    "title": "Renovated Cowork Lounge Now Open",
+    "excerpt": "Find new ergonomic seating, faster Wi-Fi, and Lisbon coffee taps in our refreshed cowork commons.",
+    "image": "../img_facility/jon-stebbe-paydk0JcIOQ-unsplash.jpg",
+    "categories": ["Operations"],
+    "body": [
+      "We’ve amplified the Sunlit Commons to support remote workers and creative travelers.",
+      "Expect additional ergonomic seating, dedicated phone booths, and dual-band Wi-Fi with enterprise-level speeds.",
+      "Complimentary Lisbon roastery cold brew now flows daily from 08:00." 
+    ]
+  },
+  {
+    "id": "welcome-sangria",
+    "date": "2025-02-20",
+    "displayDate": "20 Feb 2025",
+    "title": "Weeknight Stays Include Welcome Sangria",
+    "excerpt": "Check in Sunday–Thursday to toast the city with our house-made ruby sangria.",
+    "image": "../img/drew-coffman-jUOaONoXJQk-unsplash.jpg",
+    "categories": ["Offers"],
+    "body": [
+      "Receive a complimentary glass of our signature ruby sangria when you arrive Sunday through Thursday.",
+      "Made in-house with local vinho verde, citrus, and seasonal herbs, it’s the perfect kick-off to Bairro Alto evenings.",
+      "Ask the bar team for recommendations on the best night markets to pair with your toast." 
+    ]
+  },
+  {
+    "id": "rooftop-sessions-return",
+    "date": "2025-04-12",
+    "displayDate": "12 Apr 2025",
+    "title": "Rooftop Sessions Return Fridays",
+    "excerpt": "Secure a spot for sundown DJ sets with Lisbon creatives on our terrace each Friday.",
+    "image": "../img/andreas-brucker-X87yB-jvYHw-unsplash.jpg",
+    "categories": ["Events"],
+    "body": [
+      "Our Friday rooftop series is back with rotating Lisbon DJs and pop-up mixologists.",
+      "Reserved spots include priority bar access and complimentary tapas bites from local chefs.",
+      "Add the session to your reservation or RSVP via hello@vidahostellisbon.com." 
+    ]
+  },
+  {
+    "id": "kitchen-refresh",
+    "date": "2025-04-05",
+    "displayDate": "05 Apr 2025",
+    "title": "Shared Kitchen Refresh on 14 April",
+    "excerpt": "We’re resurfacing counters and updating appliances; the kitchen will pause service 14 April 12:00–18:00.",
+    "image": "../img_facility/drew-coffman-jUOaONoXJQk-unsplash.jpg",
+    "categories": ["Operations"],
+    "body": [
+      "Heads up travelers: the Brickwork Kitchen closes 14 April from noon to 18:00 for resurfacing and appliance calibration.",
+      "Our lobby will stock complimentary snacks and cold brew while the work wraps.",
+      "Thank you for your patience while we keep the space polished for your next meal." 
+    ]
+  },
+  {
+    "id": "festival-early-bird",
+    "date": "2025-03-29",
+    "displayDate": "29 Mar 2025",
+    "title": "Early Bird Bookings for Summer Festivals",
+    "excerpt": "Secure your bunk or suite early to receive complimentary transit passes during Lisbon’s summer festivals.",
+    "image": "../img/aayush-gupta-ljhCEaHYWJ8-unsplash.jpg",
+    "categories": ["Offers", "Events"],
+    "body": [
+      "Lisbon’s summer festival calendar fills fast—lock in your stay before 30 April and we’ll add two 24-hour metro passes per reservation.",
+      "Festival guides with neighborhood pop-ups and secret afterparties drop exclusively to direct bookers.",
+      "Email the reservations team once you book to redeem your passes." 
+    ]
+  }
+]

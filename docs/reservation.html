@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vida Hostel Lisbon | Reservation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar__top">
+        <div class="sidebar__logo">
+          <span>VIDA HOSTEL</span>
+          <span>LISBON</span>
+        </div>
+        <button
+          class="sidebar__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar-panel"
+          data-sidebar-toggle
+        >
+          <span class="sidebar__toggle-label">Menu</span>
+          <span class="sidebar__toggle-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="sidebar__panel" id="sidebar-panel" data-sidebar-panel>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="news.html">News</a>
+          <a href="facilities.html">Facility</a>
+          <a href="rooms.html">Room/Rates</a>
+          <a class="active" href="reservation.html">Reservation</a>
+          <a href="access.html">Access</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="contact">
+            <span>hello@vidahostellisbon.com</span>
+            <span>+351 21 000 1234</span>
+            <span>Rua Nova da Vida 27, Lisboa</span>
+          </div>
+          <div class="langs">EN / PT</div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header
+        class="page-hero"
+        style="background-image: url('../img/andreas-brucker-X87yB-jvYHw-unsplash.jpg');"
+      >
+        <div class="page-hero__content">
+          <div class="page-hero__eyebrow">Reserve</div>
+          <h1>Reserve Your Stay</h1>
+          <p>
+            Book directly with Vida Hostel Lisbon for the best rates, flexible
+            policies, and insider recommendations tailored to your itinerary.
+          </p>
+          <div class="breadcrumbs">Home / Reservation</div>
+        </div>
+      </header>
+
+      <section class="section" aria-labelledby="booking-steps">
+        <h2 id="booking-steps" class="section__heading">How Booking Works</h2>
+        <p class="section__intro">
+          Our direct booking path keeps things efficient. When you’re ready to
+          confirm, you’ll be redirected to our partner engine in a new tab.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <strong>Step 1:</strong> Choose your travel dates and occupancy using
+            the calendar selector.
+          </div>
+          <div class="step">
+            <strong>Step 2:</strong> Pick your preferred room category and add
+            optional experiences like breakfast or rooftop sessions.
+          </div>
+          <div class="step">
+            <strong>Step 3:</strong> Confirm guest details and continue to the
+            external booking channel (opens in a blank tab).
+          </div>
+        </div>
+
+        <a class="cta-button" href="about:blank" target="_blank" rel="noopener">Start Booking</a>
+        <p class="section__intro" style="margin-top: 1rem;">
+          Need tailored help? Email <a href="mailto:reservations@vidahostellisbon.com">reservations@vidahostellisbon.com</a> with your date range and room type.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="policies">
+        <h2 id="policies" class="section__heading">Stay Policies</h2>
+        <div class="policy-list">
+          <div class="policy-item">
+            <strong>Check-in / Check-out:</strong> Check-in from 15:00; check-out by 11:00. Early arrivals may store luggage from 08:00.
+          </div>
+          <div class="policy-item">
+            <strong>Cancellation Window:</strong> Free cancellation up to 48 hours before arrival; 50% of stay charged within 48 hours.
+          </div>
+          <div class="policy-item">
+            <strong>Security Deposit:</strong> €50 pre-authorization on arrival, released within 24 hours of departure.
+          </div>
+          <div class="policy-item">
+            <strong>Payment Methods:</strong> Visa, Mastercard, American Express, Apple Pay.
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-block">
+            <h3>Groups &amp; Long Stays</h3>
+            <p>
+              Planning for 6+ rooms or 14+ nights? Share your needs with our
+              reservations team to unlock tailored rates and coworking bundles.
+            </p>
+            <a class="secondary-link" href="mailto:reservations@vidahostellisbon.com">Contact reservations →</a>
+          </div>
+          <div class="info-block">
+            <h3>On-arrival Services</h3>
+            <p>
+              Add airport transfer, breakfast trays, or rooftop welcome drinks
+              up to 24 hours before check-in.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__section">
+          <h5>Contact</h5>
+          <ul>
+            <li>hello@vidahostellisbon.com</li>
+            <li>+351 21 000 1234</li>
+            <li>Rua Nova da Vida 27, Lisboa</li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h5>Follow</h5>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Spotify</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+    <script src="scripts/menu.js"></script>
+  </body>
+</html>

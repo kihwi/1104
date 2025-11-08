@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vida Hostel Lisbon | Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar__top">
+        <div class="sidebar__logo">
+          <span>VIDA HOSTEL</span>
+          <span>LISBON</span>
+        </div>
+        <button
+          class="sidebar__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar-panel"
+          data-sidebar-toggle
+        >
+          <span class="sidebar__toggle-label">Menu</span>
+          <span class="sidebar__toggle-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="sidebar__panel" id="sidebar-panel" data-sidebar-panel>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="active" href="index.html">Home</a>
+          <a href="news.html">News</a>
+          <a href="facilities.html">Facility</a>
+          <a href="rooms.html">Room/Rates</a>
+          <a href="reservation.html">Reservation</a>
+          <a href="access.html">Access</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="contact">
+            <span>hello@vidahostellisbon.com</span>
+            <span>+351 21 000 1234</span>
+            <span>Rua Nova da Vida 27, Lisboa</span>
+          </div>
+          <div class="langs">EN / PT</div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <section class="hero" aria-label="Vida Hostel Lisbon overview">
+        <div
+          class="hero__slides"
+          data-images='[
+            "../img/aayush-gupta-ljhCEaHYWJ8-unsplash.jpg",
+            "../img/andreas-brucker-X87yB-jvYHw-unsplash.jpg",
+            "../img/elisadventure-iljCg5q6WEY-unsplash.jpg"
+          ]'
+          style="background-image: url('../img/aayush-gupta-ljhCEaHYWJ8-unsplash.jpg');"
+        ></div>
+        <div class="hero__content">
+          <div class="hero__eyebrow">Boutique Hostel</div>
+          <h1>Welcome to Vida Hostel Lisbon</h1>
+          <p>
+            A boutique hostel for travelers who crave Lisbon’s creative pulse,
+            crafted with design-led rooms, communal energy, and just enough calm
+            to reset between adventures.
+          </p>
+          <div class="hero__meta">
+            <span>Reception 08:00–23:00 Daily</span>
+            <span>Weekend Breakfast Add-On Available</span>
+          </div>
+          <div>
+            <a class="cta-button" href="about:blank" target="_blank" rel="noopener">Book Now</a>
+            <a class="secondary-link" href="rooms.html">Plan Your Stay →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="news-heading">
+        <h2 id="news-heading" class="section__heading">News & Availability</h2>
+        <p class="section__intro">
+          Stay in the loop with the latest happenings, seasonal offers, and
+          operational updates from Vida Hostel Lisbon.
+        </p>
+        <div class="news-grid">
+          <article class="news-card">
+            <time datetime="2025-03-15">15 Mar 2025</time>
+            <h3>Spring Art Walk packages release March 15</h3>
+            <p>Reserve now to receive gallery passes and sunset tram tickets.</p>
+          </article>
+          <article class="news-card">
+            <time datetime="2025-03-02">02 Mar 2025</time>
+            <h3>Freshly renovated cowork lounge now open</h3>
+            <p>Find new ergonomic seating, fast Wi-Fi, and Lisbon coffee taps.</p>
+          </article>
+          <article class="news-card">
+            <time datetime="2025-02-20">20 Feb 2025</time>
+            <h3>Weeknight stays include complimentary welcome sangria</h3>
+            <p>Check in Sunday–Thursday to toast with our house-made infusion.</p>
+          </article>
+        </div>
+        <a class="view-all" href="news.html">View all updates →</a>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__section">
+          <h5>Contact</h5>
+          <ul>
+            <li>hello@vidahostellisbon.com</li>
+            <li>+351 21 000 1234</li>
+            <li>Rua Nova da Vida 27, Lisboa</li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h5>Follow</h5>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Spotify</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+
+    <script src="scripts/menu.js"></script>
+    <script>
+      (function () {
+        const slides = document.querySelector('.hero__slides');
+        if (!slides) return;
+        try {
+          const images = JSON.parse(slides.dataset.images || '[]');
+          if (!images.length) return;
+          let index = 0;
+          setInterval(() => {
+            index = (index + 1) % images.length;
+            slides.style.opacity = 0;
+            setTimeout(() => {
+              slides.style.backgroundImage = `url('${images[index]}')`;
+              slides.style.opacity = 1;
+            }, 600);
+          }, 6000);
+        } catch (e) {
+          console.warn('Hero slideshow disabled:', e);
+        }
+      })();
+    </script>
+  </body>
+</html>
