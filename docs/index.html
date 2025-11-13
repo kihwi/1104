@@ -94,23 +94,10 @@
           Stay in the loop with the latest happenings, seasonal offers, and
           operational updates from Vida Hostel Lisbon.
         </p>
-        <div class="news-grid">
-          <article class="news-card">
-            <time datetime="2025-03-15">15 Mar 2025</time>
-            <h3>Spring Art Walk packages release March 15</h3>
-            <p>Reserve now to receive gallery passes and sunset tram tickets.</p>
-          </article>
-          <article class="news-card">
-            <time datetime="2025-03-02">02 Mar 2025</time>
-            <h3>Freshly renovated cowork lounge now open</h3>
-            <p>Find new ergonomic seating, fast Wi-Fi, and Lisbon coffee taps.</p>
-          </article>
-          <article class="news-card">
-            <time datetime="2025-02-20">20 Feb 2025</time>
-            <h3>Weeknight stays include complimentary welcome sangria</h3>
-            <p>Check in Sunday–Thursday to toast with our house-made infusion.</p>
-          </article>
-        </div>
+        <div class="news-grid" id="home-news-grid"></div>
+        <p class="section__intro" id="home-news-empty" style="display:none;">
+          Fresh updates are being drafted. In the meantime, explore our <a href="news.html">newsroom</a>.
+        </p>
         <a class="view-all" href="news.html">View all updates →</a>
       </section>
 
@@ -184,6 +171,79 @@
         } catch (e) {
           console.warn('Hero slideshow disabled:', e);
         }
+      })();
+    </script>
+    <script>
+      (function () {
+        const grid = document.getElementById('home-news-grid');
+        const empty = document.getElementById('home-news-empty');
+        if (!grid) return;
+
+        const renderCards = (items) => {
+          grid.innerHTML = '';
+          items.forEach((item) => {
+            const card = document.createElement('article');
+            card.className = 'news-card';
+            card.tabIndex = 0;
+            card.setAttribute('role', 'link');
+            card.dataset.id = item.id;
+
+            const timeEl = document.createElement('time');
+            timeEl.dateTime = item.date || '';
+            timeEl.textContent = item.displayDate || item.date || '';
+
+            const titleEl = document.createElement('h3');
+            titleEl.textContent = item.title || 'Update';
+
+            const excerptEl = document.createElement('p');
+            excerptEl.textContent = item.excerpt || '';
+
+            card.appendChild(timeEl);
+            card.appendChild(titleEl);
+            card.appendChild(excerptEl);
+
+            card.addEventListener('click', () => {
+              if (item.id) {
+                window.location.href = `news-detail.html?id=${encodeURIComponent(item.id)}`;
+              }
+            });
+
+            card.addEventListener('keydown', (event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                if (item.id) {
+                  window.location.href = `news-detail.html?id=${encodeURIComponent(item.id)}`;
+                }
+              }
+            });
+
+            grid.appendChild(card);
+          });
+        };
+
+        fetch('data/news.json')
+          .then((response) => {
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.json();
+          })
+          .then((items) => {
+            if (!Array.isArray(items) || items.length === 0) {
+              if (empty) empty.style.display = 'block';
+              return;
+            }
+
+            const latest = items
+              .slice()
+              .sort((a, b) => new Date(b.date) - new Date(a.date))
+              .slice(0, 3);
+
+            renderCards(latest);
+            if (empty) empty.style.display = 'none';
+          })
+          .catch((error) => {
+            console.error('Failed to load home news items', error);
+            if (empty) empty.style.display = 'block';
+          });
       })();
     </script>
   </body>

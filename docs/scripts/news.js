@@ -19,6 +19,20 @@
     card.setAttribute('role', 'link');
     card.dataset.id = item.id;
 
+    if (item.image) {
+      const thumbWrap = document.createElement('div');
+      thumbWrap.className = 'news-card__thumb';
+      const img = document.createElement('img');
+      img.src = item.image;
+      img.alt = item.title ? `${item.title} thumbnail` : 'News thumbnail';
+      img.loading = 'lazy';
+      thumbWrap.appendChild(img);
+      card.appendChild(thumbWrap);
+    }
+
+    const body = document.createElement('div');
+    body.className = 'news-card__body';
+
     const timeEl = document.createElement('time');
     timeEl.dateTime = item.date || '';
     timeEl.textContent = item.displayDate || item.date || '';
@@ -29,22 +43,11 @@
     const excerptEl = document.createElement('p');
     excerptEl.textContent = item.excerpt || '';
 
-    card.appendChild(timeEl);
-    card.appendChild(titleEl);
-    card.appendChild(excerptEl);
+    body.appendChild(timeEl);
+    body.appendChild(titleEl);
+    body.appendChild(excerptEl);
 
-    if (Array.isArray(item.categories) && item.categories.length) {
-      const categoriesEl = document.createElement('div');
-      categoriesEl.className = 'news-card__categories';
-      item.categories.forEach((cat) => {
-        if (!cat) return;
-        const badge = document.createElement('span');
-        badge.className = 'tag';
-        badge.textContent = cat;
-        categoriesEl.appendChild(badge);
-      });
-      card.appendChild(categoriesEl);
-    }
+    card.appendChild(body);
 
     card.addEventListener('click', () => gotoDetail(item.id));
     card.addEventListener('keydown', (event) => {
@@ -70,7 +73,7 @@
 
     if (loadMoreButton) {
       const hasMore = renderedCount < allItems.length;
-      loadMoreButton.style.display = hasMore ? 'inline-flex' : 'none';
+      loadMoreButton.style.display = hasMore ? 'flex' : 'none';
       loadMoreButton.disabled = !hasMore;
     }
   };

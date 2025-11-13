@@ -390,7 +390,7 @@ body.nav-open {
 .room-cards,
 .facility-grid {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .news-grid {
@@ -399,14 +399,35 @@ body.nav-open {
 }
 
 .news-card {
-  display: grid;
-  gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 1.5rem;
   background: rgba(20, 20, 28, 0.6);
   border: 1px solid var(--color-border);
   transition: transform 0.2s ease;
   cursor: pointer;
   position: relative;
+}
+
+.news-card__thumb {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.news-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.news-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .news-card:hover {
@@ -436,23 +457,10 @@ body.nav-open {
 .news-card p {
   margin: 0;
   color: var(--color-text-muted);
-}
-
-.news-card__categories {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
-}
-
-.tag {
-  font-family: var(--font-sans);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.65rem;
-  border: 1px solid var(--color-border);
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .view-all {
@@ -467,8 +475,8 @@ body.nav-open {
 }
 
 .load-more {
-  margin-top: 2rem;
-  display: inline-flex;
+  margin: 2rem auto 0;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.65rem 2.4rem;
@@ -496,15 +504,59 @@ body.nav-open {
   background: rgba(20, 20, 28, 0.65);
   border: 1px solid var(--color-border);
   display: grid;
-  grid-template-columns: minmax(0, 280px) 1fr;
-  gap: 2rem;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: 3rem;
   padding: 2rem;
   align-items: center;
+}
+
+.room-card__carousel {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.room-card__carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .room-card img {
   width: 100%;
   border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.room-card__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #fff;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.room-card__control:hover,
+.room-card__control:focus-visible {
+  opacity: 1;
+}
+
+.room-card__control--prev {
+  left: 0.5rem;
+}
+
+.room-card__control--next {
+  right: 0.5rem;
 }
 
 .room-card h3 {
@@ -540,7 +592,8 @@ body.nav-open {
   width: 100%;
   border-collapse: collapse;
   font-family: var(--font-sans);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
+  font-weight: 400;
 }
 
 .compare-table th,
@@ -550,9 +603,23 @@ body.nav-open {
   text-align: left;
 }
 
-.compare-table th {
+.compare-table thead th {
   background: rgba(255, 255, 255, 0.05);
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.compare-table tbody th {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
+
+.compare-table tbody td {
+  color: var(--color-text-muted);
 }
 
 .policy-ribbon {

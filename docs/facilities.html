@@ -8,6 +8,51 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="img/favicon-192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png" />
+    <style>
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+        z-index: 1000;
+      }
+
+      .lightbox[data-open='true'] {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .lightbox__image {
+        max-width: 90vw;
+        max-height: 90vh;
+      }
+
+      .lightbox__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
+      .lightbox__control {
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-size: 3rem;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <aside class="sidebar">
@@ -289,6 +334,132 @@
         </div>
       </footer>
     </main>
+    <div class="lightbox" data-lightbox aria-hidden="true">
+      <button
+        type="button"
+        class="lightbox__close"
+        data-lightbox-close
+        aria-label="Close image"
+      >
+        &times;
+      </button>
+      <button
+        type="button"
+        class="lightbox__control"
+        data-lightbox-prev
+        aria-label="Previous image"
+      >
+        &#10094;
+      </button>
+      <img class="lightbox__image" data-lightbox-image alt="" />
+      <button
+        type="button"
+        class="lightbox__control"
+        data-lightbox-next
+        aria-label="Next image"
+      >
+        &#10095;
+      </button>
+    </div>
     <script src="scripts/menu.js"></script>
+    <script>
+      (function () {
+        const pictures = document.querySelectorAll('.facility-card picture');
+        const lightbox = document.querySelector('[data-lightbox]');
+
+        if (!lightbox || pictures.length === 0) {
+          return;
+        }
+
+        const imageEl = lightbox.querySelector('[data-lightbox-image]');
+        const closeBtn = lightbox.querySelector('[data-lightbox-close]');
+        const prevBtn = lightbox.querySelector('[data-lightbox-prev]');
+        const nextBtn = lightbox.querySelector('[data-lightbox-next]');
+        let sources = [];
+        let index = 0;
+
+        function renderImage() {
+          if (!imageEl || sources.length === 0) {
+            return;
+          }
+
+          imageEl.src = sources[index];
+          imageEl.alt = '';
+        }
+
+        function openLightbox(src) {
+          if (!src) {
+            return;
+          }
+
+          sources = [src, src];
+          index = 0;
+          renderImage();
+          lightbox.dataset.open = 'true';
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+          lightbox.dataset.open = 'false';
+          lightbox.setAttribute('aria-hidden', 'true');
+
+          if (imageEl) {
+            imageEl.removeAttribute('src');
+          }
+
+          document.body.style.overflow = '';
+        }
+
+        function move(step) {
+          if (sources.length === 0) {
+            return;
+          }
+
+          index = (index + step + sources.length) % sources.length;
+          renderImage();
+        }
+
+        pictures.forEach((picture) => {
+          picture.addEventListener('click', () => {
+            const img = picture.querySelector('img');
+            const src = img ? img.getAttribute('src') : null;
+            openLightbox(src);
+          });
+        });
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => move(-1));
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => move(1));
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeLightbox);
+        }
+
+        document.addEventListener('keydown', (event) => {
+          if (lightbox.dataset.open !== 'true') {
+            return;
+          }
+
+          if (event.key === 'Escape') {
+            closeLightbox();
+          } else if (event.key === 'ArrowLeft') {
+            move(-1);
+          } else if (event.key === 'ArrowRight') {
+            move(1);
+          }
+        });
+
+        lightbox.addEventListener('click', (event) => {
+          if (event.target === lightbox) {
+            closeLightbox();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
