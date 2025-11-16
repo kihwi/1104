@@ -8,6 +8,7 @@
   --font-heading: "Futura", "futura-pt", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Adobe Garamond Pro", "Georgia", "Times New Roman", serif;
   --font-sans: "Futura", "futura-pt", "Helvetica Neue", Arial, sans-serif;
+  --nav-offset: 0px;
   scroll-behavior: smooth;
 }
 
@@ -282,6 +283,7 @@ body.nav-open {
   position: relative;
   z-index: 2;
   max-width: 640px;
+  padding-top: var(--nav-offset);
 }
 
 .page-hero {
@@ -306,6 +308,7 @@ body.nav-open {
   position: relative;
   z-index: 1;
   max-width: 680px;
+  padding-top: var(--nav-offset);
 }
 
 .page-hero__eyebrow {
@@ -822,6 +825,10 @@ body.nav-open {
 }
 
 @media (max-width: 880px) {
+  :root {
+    --nav-offset: 110px;
+  }
+
   body {
     grid-template-columns: 1fr;
     background-attachment: scroll;
@@ -908,7 +915,7 @@ body.nav-open {
   }
 
   main {
-    margin-top: 110px;
+    margin-top: 0;
   }
 }
 
