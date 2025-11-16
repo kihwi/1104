@@ -259,7 +259,6 @@ body.nav-open {
   display: flex;
   align-items: center;
   padding: 6rem clamp(3rem, 6vw, 8rem);
-  padding-top: calc(6rem + var(--nav-offset));
   overflow: hidden;
 }
 
@@ -284,12 +283,12 @@ body.nav-open {
   position: relative;
   z-index: 2;
   max-width: 640px;
+  padding-top: var(--nav-offset);
 }
 
 .page-hero {
   position: relative;
   padding: clamp(5rem, 8vw, 7rem) clamp(3rem, 6vw, 8rem);
-  padding-top: calc(clamp(5rem, 8vw, 7rem) + var(--nav-offset));
   background-size: cover;
   background-position: center;
   display: flex;
@@ -309,6 +308,7 @@ body.nav-open {
   position: relative;
   z-index: 1;
   max-width: 680px;
+  padding-top: var(--nav-offset);
 }
 
 .page-hero__eyebrow {
@@ -845,7 +845,6 @@ body.nav-open {
 @media (max-width: 620px) {
   .hero {
     padding: 4rem 2rem;
-    padding-top: calc(4rem + var(--nav-offset));
   }
 
   .section {
