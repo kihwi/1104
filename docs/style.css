@@ -16,6 +16,12 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
 html,
 body {
   margin: 0;
@@ -32,6 +38,9 @@ body {
   display: grid;
   grid-template-columns: 260px 1fr;
   background-color: #050507;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 main {
@@ -916,6 +925,27 @@ body.nav-open {
 
   main {
     margin-top: 0;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .table-wrap {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .compare-table {
+    font-size: 0.8rem;
+    min-width: 600px;
+  }
+  
+  .compare-table th,
+  .compare-table td {
+    padding: 0.6rem 0.5rem;
   }
 }
 
@@ -948,5 +978,30 @@ body.nav-open {
 
   .secondary-link {
     margin: 1rem 0 0;
+  }
+  
+  .table-wrap {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .compare-table {
+    font-size: 0.75rem;
+    min-width: 550px;
+  }
+  
+  .compare-table th,
+  .compare-table td {
+    padding: 0.5rem 0.4rem;
+  }
+  
+  .compare-table thead th {
+    font-size: 0.75rem;
+  }
+  
+  .compare-table tbody th {
+    font-size: 0.7rem;
   }
 }
