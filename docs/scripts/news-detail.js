@@ -1,6 +1,7 @@
 (function () {
   const params = new URLSearchParams(window.location.search);
   const articleId = params.get('id');
+  const dataSource = window.NewsDataSource;
 
   const hero = document.getElementById('news-hero');
   const titleEl = document.getElementById('article-title');
@@ -24,21 +25,14 @@
     if (articleWrapper) articleWrapper.setAttribute('data-status', 'empty');
   };
 
-  if (!articleId) {
+  if (!articleId || !dataSource || typeof dataSource.fetchById !== 'function') {
     renderNotFound();
     return;
   }
 
-  fetch('data/news.json')
-    .then((response) => {
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.json();
-    })
-    .then((items) => {
-      const article = Array.isArray(items)
-        ? items.find((item) => item.id === articleId)
-        : null;
-
+  dataSource
+    .fetchById(articleId)
+    .then((article) => {
       if (!article) {
         renderNotFound();
         return;

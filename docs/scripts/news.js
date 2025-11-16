@@ -4,6 +4,12 @@
   const loadMoreButton = document.getElementById('news-load-more');
   if (!grid) return;
 
+  const dataSource = window.NewsDataSource;
+  if (!dataSource || typeof dataSource.fetchAll !== 'function') {
+    console.error('NewsDataSource is unavailable.');
+    return;
+  }
+
   const PAGE_SIZE = 3;
   let allItems = [];
   let renderedCount = 0;
@@ -98,11 +104,8 @@
     });
   }
 
-  fetch('data/news.json')
-    .then((response) => {
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.json();
-    })
+  dataSource
+    .fetchAll()
     .then((items) => {
       if (!Array.isArray(items) || items.length === 0) {
         if (emptyMessage) emptyMessage.style.display = 'block';
