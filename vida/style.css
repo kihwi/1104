@@ -832,17 +832,13 @@ body.nav-open {
 
   main {
     margin-top: 0;
-  }
-
-  .hero {
-    padding-top: calc(6rem + 110px);
+    padding-top: 110px;
   }
 }
 
 @media (max-width: 620px) {
   .hero {
     padding: 4rem 2rem;
-    padding-top: calc(4rem + 110px);
   }
 
   .section {
